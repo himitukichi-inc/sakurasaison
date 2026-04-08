@@ -232,18 +232,20 @@ footer { padding: 36px 48px; border-top: 2px solid var(--bg2); display: flex; ju
 
 <section id="youtube" class="sec-wrap" style="text-align:center">
   <div class="sec-label reveal">MOVIE</div>
-  <div class="sec-en reveal d1">YouTube</div>
+  <div class="sec-en reveal d1">VIDEO</div>
   <div class="sec-jp reveal d2">このわ officialチャンネル</div>
-  <div class="reveal" style="max-width:1050px;margin:0 auto;position:relative">
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 4px 20px rgba(232,96,154,.12)">
-      <iframe id="yt-player" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/nReDZYwxkyA" allowfullscreen></iframe>
+  <div class="reveal" style="max-width:1050px;position:relative;display:flex;align-items:center;gap:16px">
+    <button onclick="ytPrev()" style="width:48px;height:48px;border-radius:50%;border:2px solid var(--pink);background:none;color:var(--pink);font-size:1.5rem;cursor:pointer;transition:all .3s;flex-shrink:0">‹</button>
+    <div style="flex:1">
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 4px 20px rgba(232,96,154,.12)">
+        <iframe id="yt-player" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/nReDZYwxkyA" allowfullscreen></iframe>
+      </div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:20px">
-      <button onclick="ytPrev()" style="width:44px;height:44px;border-radius:50%;border:2px solid var(--pink);background:none;color:var(--pink);font-size:1.2rem;cursor:pointer;transition:all .3s">‹</button>
-      <span id="yt-counter" style="font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--pink);letter-spacing:.1em">1 / 2</span>
-      <button onclick="ytNext()" style="width:44px;height:44px;border-radius:50%;border:2px solid var(--pink);background:none;color:var(--pink);font-size:1.2rem;cursor:pointer;transition:all .3s">›</button>
-    </div>
-    <a href="https://www.youtube.com/@official-konowa" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-family:var(--display);font-size:.75rem;font-weight:600;letter-spacing:.12em;color:var(--pink);text-decoration:none">チャンネルを見る →</a>
+    <button onclick="ytNext()" style="width:48px;height:48px;border-radius:50%;border:2px solid var(--pink);background:none;color:var(--pink);font-size:1.5rem;cursor:pointer;transition:all .3s;flex-shrink:0">›</button>
+  </div>
+  <div style="margin-top:12px;display:flex;align-items:center;gap:16px">
+    <span id="yt-counter" style="font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--pink);letter-spacing:.1em">1 / 2</span>
+    <a href="https://www.youtube.com/@official-konowa" target="_blank" rel="noopener" style="font-family:var(--display);font-size:.75rem;font-weight:600;letter-spacing:.12em;color:var(--pink);text-decoration:none">チャンネルを見る →</a>
   </div>
 <script>
 var ytVideos=['nReDZYwxkyA','_LKoRAbn6UQ'],ytIdx=0;
